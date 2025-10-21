@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN echo "CREATE USER 'bibliotecario'@'localhost' IDENTIFIED BY 'Biblioteca@123'; \
-        GRANT ALL PRIVILEGES ON *.* TO 'raihany'@'localhost' WITH GRANT OPTION; \
+        GRANT ALL PRIVILEGES ON *.* TO 'bibliotecario'@'localhost' WITH GRANT OPTION; \
         CREATE DATABASE projeto; \
         FLUSH PRIVILEGES;" > /tmp/script.sql
 
