@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN echo "CREATE USER 'bibliotecario'@'localhost' IDENTIFIED BY 'Biblioteca@123'; \
         GRANT ALL PRIVILEGES ON *.* TO 'bibliotecario'@'localhost' WITH GRANT OPTION; \
-        CREATE DATABASE Biblioteca; \
+        CREATE DATABASE biblioteca; \
         FLUSH PRIVILEGES;" > /tmp/script.sql
 
 RUN service mysql start && \
